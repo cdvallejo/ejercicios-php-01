@@ -43,10 +43,49 @@
 
         $signo = "";
         
-        switch (true){
-            case ($fecha >= $ariesInicio && $fecha <= $ariesFin)
-            $signo = Aries;
+        switch (true) {
+            case ($fecha >= $ariesInicio && $fecha <= $ariesFin):
+                $signo = "Aries";
+                break;
+            case ($fecha >= $tauroInicio && $fecha <= $tauroFin):
+                $signo = "Tauro";
+                break;
+            case ($fecha >= $geminisInicio && $fecha <= $geminisFin):
+                $signo = "Géminis";
+                break;
+            case ($fecha >= $cancerInicio && $fecha <= $cancerFin):
+                $signo = "Cáncer";
+                break;
+            case ($fecha >= $leoInicio && $fecha <= $leoFin):
+                $signo = "Leo";
+                break;
+            case ($fecha >= $virgoInicio && $fecha <= $virgoFin):
+                $signo = "Virgo";
+                break;
+            case ($fecha >= $libraInicio && $fecha <= $libraFin):
+                $signo = "Libra";
+                break;
+            case ($fecha >= $escorpioInicio && $fecha <= $escorpioFin):
+                $signo = "Escorpio";
+                break;
+            case ($fecha >= $sagitarioInicio && $fecha <= $sagitarioFin):
+                $signo = "Sagitario";
+                break;
+            case ($fecha >= $capriInicio1 && $fecha <= $capriFin1):
+                $signo = "Capricornio";
+                break;
+            case ($fecha >= $capriInicio2 && $fecha <= $capriFin2):
+                $signo = "Capricornio";
+                break;
+            case ($fecha >= $acuarioInicio && $fecha <= $acuarioFin):
+                $signo = "Acuario";
+                break;
+            case ($fecha >= $piscisInicio && $fecha <= $piscisFin):
+                $signo = "Piscis";
+                break;
         }
+
+        echo "Tu signo del zodiaco es $signo.";
     ?>
     <br><br>
     <a href="../index.html">Página principal</a>  
