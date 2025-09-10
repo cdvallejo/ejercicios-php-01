@@ -11,7 +11,7 @@
 
         $resultado = ($total * 0.21) + $total;
         $resultadoRedondeado = round($resultado, 2);
-        echo "El total con IVA es: $resultadoRedondeado €"; 
+        echo "El total con IVA es: ", round($resultadoRedondeado,2)," €"; 
     ?>
     <br><br>
     <a href="../index.html">Página principal</a>  
