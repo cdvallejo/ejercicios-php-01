@@ -15,21 +15,45 @@
     </form>
 
     <?php
-        if (isset($_POST["comenzar"])) { // Se comprueba número enviado
-            $numero = $_POST["numero"];
+        if (isset($_POST["comenzar"])) { 
+            $palos = ["copas", "espadas", "bastos", "oros"];
+            $valores = ["as", "2", "3", "4", "5", "6", "7", "sota", "caballo", "rey"];
+
+            $puntos = [
+                "as" => 11,
+                "3" => 10,
+                "rey" => 4,
+                "caballo" => 3,
+                "sota" => 2,
+                "2" => 0,
+                "4" => 0,
+                "5" => 0,
+                "6" => 0,
+                "7" => 0,
+            ];
             echo "<br>";
 
-            $i = $numero;
-            if ($i == 0) {
-                echo "$numero";
-            } else {
-                $factorial = 1;
-                while ($i > 0) {
-                    $factorial *= $i;
-                    $i--;
+            $cartasSacadas = [];
+            $sumaPuntos = 0;
+            for ($i = 1; $i <= 10; $i++) {
+                $nPalo = rand(0, 3);
+                $nValor = rand(0, 9);
+
+                // guardamos el palo y el valor sacado en un nuevo array asociativo para guardar las cartas sacadas
+                $valorSacado = $valores[$nValor];
+                $paloSacado = $palos[$nPalo];
+                $carta = "$valorSacado de $paloSacado"; 
+
+                if (!in_array($carta, $cartasSacadas)) {
+                    $cartasSacadas[] = $carta; // vamos agregando las cartas al array
+                    echo "- ", $carta, " > ", $puntos[$valores[$nValor]]; // con el array asociativo sacamos los puntos de cada valor
+                    echo "<br>";
+                    $sumaPuntos += $puntos[$valores[$nValor]]; 
+                } else {
+                    $i--; // que repita esa iteración porque la carta se ha repetido
                 }
             }
-            echo "El factorial de $numero es $factorial.";
+            echo "<br><b>Total puntuación: </b> $sumaPuntos";
         }
     ?>
     <br><br>
