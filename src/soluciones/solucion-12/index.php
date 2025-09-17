@@ -1,14 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="style.css">
     <title>Ejercicio 12</title>
 </head>
+
 <body>
-    <p>Realiza un programa que pinte una pirámide por pantalla. La altura se debe pedir por teclado mediante un formulario. La pirámide estará hecha de bolitas, ladrillos o cualquier otra imagen de las 5 que se deben dar a elegir mediante un formulario.</p> 
-    <p>Por favor, introduzca la altura de la pirámide: </p>
+    <header>
+        <h1>Ejercicios PHP - Relación 1</h1>
+        <h3>Alumno: Carlos D. Vallejo Aranda</h3>
+        <img src="../../img/yo-42-avatar-centrado.jpg" alt="">
+    </header>
+    <main>
+        <div class="ejercicio">
+            <h2>Ejercicio 12</h2>
+            <p>Realiza un programa que pinte una pirámide por pantalla. La altura se debe pedir por teclado mediante un
+            formulario. La pirámide estará hecha de bolitas, ladrillos o cualquier otra imagen de las 5 que se deben dar
+            a elegir mediante un formulario.</p>
 
     <form action="index.php" method="post">
         <label for="plantas">Número de plantas de la pirámide: </label>
@@ -46,8 +58,13 @@
             }
     ?>
         </div>
+        </div>
+    </main>
+
+    <div class="volver">
+        <a href="../../index.html">Página principal</a>
+    </div>
     
-    <br><br>
-    <a href="../../index.html">Página principal</a>  
 </body>
+
 </html>
