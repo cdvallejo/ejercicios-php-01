@@ -71,7 +71,7 @@
     </main>
 
     <div class="volver">
-        <a href="../../index.html">Página principal</a>
+        <a href="../../index.php">Página principal</a>
     </div>
     
 </body>

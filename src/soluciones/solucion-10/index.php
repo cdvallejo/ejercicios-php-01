@@ -58,7 +58,7 @@
     <div class="volver">
     <a href="reset.php"><button>Resetear</button></a>
     <br><br>
-    <a href="../../index.html">Página principal</a>  
+    <a href="../../index.php">Página principal</a>
     </div>
     
 </body>
