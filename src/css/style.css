@@ -29,7 +29,7 @@ header {
 
 /* Imagen de perfil */
 header img {
-  width: 200px;
+  width: 160px;
   height: auto;
   border-radius: 50%;
   object-fit: cover;
